@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS yado_bd;
+aCREATE DATABASE IF NOT EXISTS yado_bd;
 
 USE yado_bd;
 
@@ -115,8 +115,8 @@ CREATE TABLE parameters (
     free_cancellation BOOLEAN,
     self_catering BOOLEAN,
     breakfast_included BOOLEAN,
-    breackfast_dinner_included BOOLEAN,
-    twin_beeds BOOLEAN,
+    breakfast_dinner_included BOOLEAN,
+    twin_beds BOOLEAN,
     double_bed BOOLEAN,
     large_double_bed BOOLEAN,
     extra_large_double_bed BOOLEAN,
