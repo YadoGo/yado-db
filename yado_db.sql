@@ -16,27 +16,27 @@ CREATE TABLE users (
     email VARCHAR(100),
     password VARCHAR(50),
     gender CHAR,
-    role_id INT,
-    FOREIGN KEY (role_id) REFERENCES roles(id)
+    role_id INT DEFAULT 1,
+    FOREIGN KEY (role_id) REFERENCES roles(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE countries (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50)
 );
 
 CREATE TABLE states (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200),
     country_id INT,
-    FOREIGN KEY (country_id) REFERENCES countries(id)
+    FOREIGN KEY (country_id) REFERENCES countries(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE populations (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     state_id INT,
-    FOREIGN KEY (state_id) REFERENCES states(id)
+    FOREIGN KEY (state_id) REFERENCES states(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE hotels (
@@ -47,64 +47,64 @@ CREATE TABLE hotels (
     address VARCHAR(50),
     latitude FLOAT,
     longitude FLOAT,
-    num_visited INT,
+    num_visited INT DEFAULT 0,
     population_id INT,
-    FOREIGN KEY (population_id) REFERENCES populations(id)
+    FOREIGN KEY (population_id) REFERENCES populations(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE propietario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_uuid VARCHAR(40),
     hotel_uuid VARCHAR(40),
-    FOREIGN KEY (user_uuid) REFERENCES users(uuid),
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid)
+    FOREIGN KEY (user_uuid) REFERENCES users(uuid) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE favorites (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_uuid VARCHAR(40),
     hotel_uuid VARCHAR(40),
-    FOREIGN KEY (user_uuid) REFERENCES users(uuid),
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid)
+    FOREIGN KEY (user_uuid) REFERENCES users(uuid) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE reviews (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     qualification INT,
     positive_comment VARCHAR(200),
     negative_comment VARCHAR(200),
     user_id VARCHAR(40),
     hotel_uuid VARCHAR(40),
-    FOREIGN KEY (user_id) REFERENCES users(uuid),
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid)
+    FOREIGN KEY (user_id) REFERENCES users(uuid) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE images (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     url VARCHAR(200),
     description VARCHAR(200),
     hotel_uuid VARCHAR(40),
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid)
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE companies (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
     url VARCHAR(200)
 );
 
 CREATE TABLE sites (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     url_origin VARCHAR(200),
     nightly_price FLOAT,
     hotel_uuid VARCHAR(40),
     company_id INT,
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid),
-    FOREIGN KEY (company_id) REFERENCES companies(id)
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE parameters (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     beach_distance FLOAT,
     center_distance FLOAT,
     bicycle_rental BOOLEAN,
@@ -115,8 +115,8 @@ CREATE TABLE parameters (
     free_cancellation BOOLEAN,
     self_catering BOOLEAN,
     breakfast_included BOOLEAN,
-    breakfast_dinner_included BOOLEAN,
-    twin_beds BOOLEAN,
+    breackfast_dinner_included BOOLEAN,
+    twin_beeds BOOLEAN,
     double_bed BOOLEAN,
     large_double_bed BOOLEAN,
     extra_large_double_bed BOOLEAN,
@@ -155,5 +155,5 @@ CREATE TABLE parameters (
     visual_aids_braille BOOLEAN,
     visual_aids_tactile_signs BOOLEAN,
     hotel_uuid VARCHAR(40),
-    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid)
+    FOREIGN KEY (hotel_uuid) REFERENCES hotels(uuid) ON UPDATE CASCADE ON DELETE CASCADE
 );
