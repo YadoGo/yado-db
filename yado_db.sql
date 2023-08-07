@@ -52,7 +52,7 @@ CREATE TABLE hotels (
     FOREIGN KEY (population_id) REFERENCES populations(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE propietario (
+CREATE TABLE owners (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_uuid VARCHAR(40),
     hotel_uuid VARCHAR(40),
