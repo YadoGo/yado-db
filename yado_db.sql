@@ -1,4 +1,4 @@
-aCREATE DATABASE IF NOT EXISTS yado_bd;
+CREATE DATABASE IF NOT EXISTS yado_bd;
 
 USE yado_bd;
 
@@ -42,7 +42,7 @@ CREATE TABLE populations (
 CREATE TABLE hotels (
     uuid VARCHAR(36) PRIMARY KEY,
     name VARCHAR(50),
-    description VARCHAR(500),
+    description VARCHAR(1500),
     stars INT,
     address VARCHAR(50),
     latitude FLOAT,
@@ -70,7 +70,7 @@ CREATE TABLE favorites (
 
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    qualification INT,
+    qualification FLOAT,
     positive_comment VARCHAR(200),
     negative_comment VARCHAR(200),
     user_id VARCHAR(40),
@@ -90,7 +90,8 @@ CREATE TABLE images (
 CREATE TABLE companies (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50),
-    url VARCHAR(200)
+    url VARCHAR(200),
+    url_logo VARCHAR(200)
 );
 
 CREATE TABLE sites (
@@ -115,8 +116,8 @@ CREATE TABLE parameters (
     free_cancellation BOOLEAN,
     self_catering BOOLEAN,
     breakfast_included BOOLEAN,
-    breackfast_dinner_included BOOLEAN,
-    twin_beeds BOOLEAN,
+    breakfast_dinner_included BOOLEAN,
+    twin_beds BOOLEAN,
     double_bed BOOLEAN,
     large_double_bed BOOLEAN,
     extra_large_double_bed BOOLEAN,
