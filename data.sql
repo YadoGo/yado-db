@@ -1,17 +1,17 @@
-INSERT INTO roles (id, name, description) 
+INSERT INTO Roles (ID, Name, Description) 
 VALUES 
 (1, 'User', 'Role for regular users'),
 (2, 'Hotel Manager', 'Role for people managing hotels'),
 (3, 'Admin', 'Role for system administrators');
 
 -- Datos de prueba
-INSERT INTO users (uuid, first_name, last_name, username, email, password, gender, role_id) 
+INSERT INTO Users (UUID, FirstName, LastName, Email, Password, Gender, ImageProfile, RoleId) 
 VALUES 
 ('e731b1d2-85cf-4c01-95a6-47614cb5a587', 'John', 'Doe', 'johndoe', 'johndoe@example.com', 'password123', 'M', 1),
 ('fd405768-0d1f-4a8f-9c46-5b1ff49db76a', 'Alice', 'Smith', 'alicesmith', 'alicesmith@example.com', 'securepass', 'F', 2),
 ('c3d5584f-1b2e-4e6c-88c9-2dc2726e47c5', 'Michael', 'Johnson', 'michaelj', 'michaelj@example.com', 'mypass123', 'M', 3);
 
-INSERT INTO countries (name) 
+INSERT INTO Countries (Name) 
 VALUES
 ('Afghanistan'),
 ('Albania'),
@@ -209,7 +209,7 @@ VALUES
 ('Zambia'),
 ('Zimbabwe');
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Badakhshan', 1),
 ('Badghis', 1),
@@ -247,7 +247,7 @@ VALUES
 ('Zabul', 1);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Berat', 2),
 ('Dibër', 2),
@@ -263,7 +263,7 @@ VALUES
 ('Vlorë', 2);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Adrar', 3),
 ('Aïn Defla', 3),
@@ -314,7 +314,7 @@ VALUES
 ('Tizi Ouzou', 3),
 ('Tlemcen', 3);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Andorra la Vella', 4),
 ('Canillo', 4),
@@ -325,7 +325,7 @@ VALUES
 ('Sant Julià de Lòria', 4);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bengo', 5),
 ('Benguela', 5),
@@ -346,12 +346,12 @@ VALUES
 ('Uíge', 5),
 ('Zaire', 5);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Barbuda', 6),
 ('Antigua', 6);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Buenos Aires', 7),
 ('Catamarca', 7),
@@ -379,7 +379,7 @@ VALUES
 ('Ciudad Autónoma de Buenos Aires', 7);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aragatsotn', 8),
 ('Ararat', 8),
@@ -394,7 +394,7 @@ VALUES
 ('Ereván', 8);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Nueva Gales del Sur', 9),
 ('Victoria', 9),
@@ -406,7 +406,7 @@ VALUES
 ('Territorio del Norte', 9);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Burgenland', 10),
 ('Carintia', 10),
@@ -419,7 +419,7 @@ VALUES
 ('Viena', 10);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Absheron', 11),
 ('Aghdam', 11),
@@ -495,7 +495,7 @@ VALUES
 ('Zaqatala', 11),
 ('Zardab', 11);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Acklins', 12),
 ('Berry Islands', 12),
@@ -530,7 +530,7 @@ VALUES
 ('West Grand Bahama', 12);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Capital', 13),
 ('Central', 13),
@@ -538,7 +538,7 @@ VALUES
 ('Norte', 13),
 ('Sur', 13);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Barisal', 14),
 ('Chittagong', 14),
@@ -550,7 +550,7 @@ VALUES
 ('Sylhet', 14);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Christ Church', 15),
 ('St. Andrew', 15),
@@ -565,7 +565,7 @@ VALUES
 ('St. Thomas', 15);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Brest Oblast', 16),
 ('Gomel Oblast', 16),
@@ -576,7 +576,7 @@ VALUES
 ('Ciudad de Minsk', 16);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Región de Flandes', 17),
 ('Región de Valonia', 17),
@@ -593,7 +593,7 @@ VALUES
 ('Valonia Oriental', 17);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Distrito de Belice', 18),
 ('Distrito de Cayo', 18),
@@ -603,7 +603,7 @@ VALUES
 ('Distrito de Toledo', 18);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alibori', 19),
 ('Atakora', 19),
@@ -619,7 +619,7 @@ VALUES
 ('Zou', 19);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bumthang', 20),
 ('Chhukha', 20),
@@ -643,7 +643,7 @@ VALUES
 ('Zhemgang', 20);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Chuquisaca', 21),
 ('Cochabamba', 21),
@@ -656,7 +656,7 @@ VALUES
 ('Tarija', 21);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Cantón 10 (Posavina)', 22),
 ('Cantón Herzegovina-Neretva', 22),
@@ -680,7 +680,7 @@ VALUES
 ('Višegrad', 22);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central', 23),
 ('Chobe', 23),
@@ -693,7 +693,7 @@ VALUES
 ('North East', 23),
 ('North West', 23);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Acre', 24),
 ('Alagoas', 24),
@@ -723,14 +723,14 @@ VALUES
 ('Sergipe', 24),
 ('Tocantins', 24);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Belait', 25),
 ('Brunei-Muara', 25),
 ('Temburong', 25),
 ('Tutong', 25);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Blagoevgrad', 26),
 ('Burgas', 26),
@@ -762,7 +762,7 @@ VALUES
 ('Yambol', 26);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Boucle du Mouhoun', 27),
 ('Cascades', 27),
@@ -779,7 +779,7 @@ VALUES
 ('Sud-Ouest', 27);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bubanza', 28),
 ('Bujumbura Mairie', 28),
@@ -801,7 +801,7 @@ VALUES
 ('Ruyigi', 28);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Boa Vista', 29),
 ('Brava', 29),
@@ -827,7 +827,7 @@ VALUES
 ('Tarrafal de São Nicolau', 29);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Banteay Meanchey', 30),
 ('Battambang', 30),
@@ -856,7 +856,7 @@ VALUES
 ('Tbong Khmum', 30);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Adamaoua', 31),
 ('Centre', 31),
@@ -870,7 +870,7 @@ VALUES
 ('West', 31);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alberta', 32),
 ('British Columbia', 32),
@@ -887,7 +887,7 @@ VALUES
 ('Yukon', 32);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bamingui-Bangoran', 33),
 ('Bangui', 33),
@@ -907,7 +907,7 @@ VALUES
 ('Vakaga', 33);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Batha', 34),
 ('Borkou', 34),
@@ -934,7 +934,7 @@ VALUES
 ('Wadi Fira', 34);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Arica y Parinacota', 35),
 ('Tarapacá', 35),
@@ -954,7 +954,7 @@ VALUES
 ('Magallanes y de la Antártica Chilena', 35);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Anhui', 36),
 ('Fujian', 36),
@@ -991,7 +991,7 @@ VALUES
 ('Macau', 36);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Amazonas', 37),
 ('Antioquia', 37),
@@ -1027,14 +1027,14 @@ VALUES
 ('Vichada', 37);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Grande Comore', 38),
 ('Anjouan', 38),
 ('Mohéli', 38);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bouenza', 39),
 ('Brazzaville', 39),
@@ -1050,7 +1050,7 @@ VALUES
 ('Pointe-Noire', 39);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bas-Uélé', 40),
 ('Équateur', 40),
@@ -1078,7 +1078,7 @@ VALUES
 ('Tanganyika', 40);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Tshopo', 41),
 ('Tshuapa', 41),
@@ -1091,7 +1091,7 @@ VALUES
 ('San José', 41);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Abidjan', 42),
 ('Bas-Sassandra', 42),
@@ -1109,7 +1109,7 @@ VALUES
 ('Zanzan', 42);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bjelovar-Bilogora', 43),
 ('Brod-Posavina', 43),
@@ -1133,7 +1133,7 @@ VALUES
 ('Zagreb', 43);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Pinar del Río', 44),
 ('Artemisa', 44),
@@ -1153,7 +1153,7 @@ VALUES
 ('Isla de la Juventud', 44);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Nicosia', 45),
 ('Limassol', 45),
@@ -1163,7 +1163,7 @@ VALUES
 ('Kyrenia', 45);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Hlavní město Praha', 46),
 ('Středočeský kraj', 46),
@@ -1181,7 +1181,7 @@ VALUES
 ('Moravskoslezský kraj', 46);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Capital Region of Denmark', 47),
 ('Region Zealand', 47),
@@ -1190,7 +1190,7 @@ VALUES
 ('North Denmark Region', 47);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ali Sabieh', 48),
 ('Arta', 48),
@@ -1200,7 +1200,7 @@ VALUES
 ('Tadjourah', 48);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Saint Andrew', 49),
 ('Saint David', 49),
@@ -1214,7 +1214,7 @@ VALUES
 ('Saint Peter', 49);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Azua', 50),
 ('Baoruco', 50),
@@ -1249,7 +1249,7 @@ VALUES
 ('Valverde', 50),
 ('National District', 50);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Díli', 51),
 ('Baucau', 51),
@@ -1266,7 +1266,7 @@ VALUES
 ('Oecusse', 51);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Azuay', 52),
 ('Bolívar', 52),
@@ -1294,7 +1294,7 @@ VALUES
 ('Zamora-Chinchipe', 52);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alexandria', 53),
 ('Aswan', 53),
@@ -1325,7 +1325,7 @@ VALUES
 ('Suez', 53);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ahuachapán', 54),
 ('Cabañas', 54),
@@ -1343,7 +1343,7 @@ VALUES
 ('Usulután', 54);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Annobón', 55),
 ('Bioko Norte', 55),
@@ -1355,7 +1355,7 @@ VALUES
 ('Djibloho', 55);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Anseba', 56),
 ('Debub', 56),
@@ -1365,7 +1365,7 @@ VALUES
 ('Southern Red Sea', 56);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Harju County', 57),
 ('Hiiu County', 57),
@@ -1384,7 +1384,7 @@ VALUES
 ('Võru County', 57);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Hhohho', 58),
 ('Lubombo', 58),
@@ -1392,7 +1392,7 @@ VALUES
 ('Shiselweni', 58);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Addis Ababa', 59),
 ('Afar', 59),
@@ -1407,7 +1407,7 @@ VALUES
 ('Tigray', 59);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Division', 60),
 ('Naitasiri', 60),
@@ -1431,7 +1431,7 @@ VALUES
 ('Ra', 60);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Åland Islands', 61),
 ('Southern Finland', 61),
@@ -1454,7 +1454,7 @@ VALUES
 ('Päijänne Tavastia', 61);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Auvergne-Rhône-Alpes', 62),
 ('Bourgogne-Franche-Comté', 62),
@@ -1476,7 +1476,7 @@ VALUES
 ('Mayotte', 62);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Estuaire', 63),
 ('Haut-Ogooué', 63),
@@ -1489,7 +1489,7 @@ VALUES
 ('Woleu-Ntem', 63);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Banjul', 64),
 ('Lower River', 64),
@@ -1498,7 +1498,7 @@ VALUES
 ('Upper River', 64);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Guria', 65),
 ('Imereti', 65),
@@ -1513,7 +1513,7 @@ VALUES
 ('Adjara', 65);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Baden-Württemberg', 66),
 ('Bavaria', 66),
@@ -1533,7 +1533,7 @@ VALUES
 ('Thuringia', 66);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ashanti', 67),
 ('Brong-Ahafo', 67),
@@ -1553,7 +1553,7 @@ VALUES
 ('North East', 67);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Attica', 68),
 ('Central Greece', 68),
@@ -1570,7 +1570,7 @@ VALUES
 ('West Macedonia', 68);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Saint Andrew', 69),
 ('Saint David', 69),
@@ -1580,7 +1580,7 @@ VALUES
 ('Saint Patrick', 69);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alta Verapaz', 70),
 ('Baja Verapaz', 70),
@@ -1606,7 +1606,7 @@ VALUES
 ('Zacapa', 70);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Boké', 71),
 ('Conakry', 71),
@@ -1618,7 +1618,7 @@ VALUES
 ('Nzérékoré', 71);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bafatá', 72),
 ('Biombo', 72),
@@ -1630,7 +1630,7 @@ VALUES
 ('Quinara', 72),
 ('Tombali', 72);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Barima-Waini', 73),
 ('Cuyuni-Mazaruni', 73),
@@ -1644,7 +1644,7 @@ VALUES
 ('Upper Takutu-Upper Essequibo', 73);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Artibonite', 74),
 ('Centre', 74),
@@ -1658,7 +1658,7 @@ VALUES
 ('Sud-Est', 74);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Atlántida', 75),
 ('Choluteca', 75),
@@ -1680,7 +1680,7 @@ VALUES
 ('Yoro', 75);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bács-Kiskun', 76),
 ('Baranya', 76),
@@ -1703,7 +1703,7 @@ VALUES
 ('Zala', 76);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Capital Region', 77),
 ('Southern Peninsula', 77),
@@ -1715,7 +1715,7 @@ VALUES
 ('South Region', 77);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Andhra Pradesh', 78),
 ('Arunachal Pradesh', 78),
@@ -1753,7 +1753,7 @@ VALUES
 ('Puducherry', 78);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aceh', 79),
 ('North Sumatra', 79),
@@ -1791,7 +1791,7 @@ VALUES
 ('Papua', 79);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alborz', 80),
 ('Ardabil', 80),
@@ -1826,7 +1826,7 @@ VALUES
 ('Zanjan', 80);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Al Anbar', 81),
 ('Al Basrah', 81),
@@ -1845,7 +1845,7 @@ VALUES
 ('Wasit', 81);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Carlow', 82),
 ('Cavan', 82),
@@ -1875,7 +1875,7 @@ VALUES
 ('Wicklow', 82);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Northern District', 83),
 ('Haifa District', 83),
@@ -1885,7 +1885,7 @@ VALUES
 ('Southern District', 83);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Abruzzo', 84),
 ('Basilicata', 84),
@@ -1909,7 +1909,7 @@ VALUES
 ('Veneto', 84);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Kingston', 85),
 ('Saint Andrew', 85),
@@ -1927,7 +1927,7 @@ VALUES
 ('Saint Thomas', 85);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aichi', 86),
 ('Akita', 86),
@@ -1978,7 +1978,7 @@ VALUES
 ('Yamanashi', 86);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Amman', 87),
 ('Irbid', 87),
@@ -1994,7 +1994,7 @@ VALUES
 ('Ajloun', 87);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Akmola', 88),
 ('Aktobe', 88),
@@ -2015,7 +2015,7 @@ VALUES
 ('Shymkent', 88);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Baringo', 89),
 ('Bomet', 89),
@@ -2066,7 +2066,7 @@ VALUES
 ('West Pokot', 89);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Gilbert Islands', 90),
 ('Line Islands', 90),
@@ -2089,7 +2089,7 @@ VALUES
 ('Arorae', 90);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Pyongan-bukdo', 91),
 ('Pyongan-namdo', 91),
@@ -2107,7 +2107,7 @@ VALUES
 ('Sinuiju', 91);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Gyeonggi-do', 92),
 ('Gangwon-do', 92),
@@ -2125,7 +2125,7 @@ VALUES
 ('Gwangju', 92);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('District of Pristina', 93),
 ('District of Mitrovica', 93),
@@ -2136,7 +2136,7 @@ VALUES
 ('District of Gjakova', 93);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Al Asimah', 94),
 ('Hawalli', 94),
@@ -2146,7 +2146,7 @@ VALUES
 ('Jahra', 94);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Chuy Oblast', 95),
 ('Osh Oblast', 95),
@@ -2159,7 +2159,7 @@ VALUES
 ('Osh', 95);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Attapeu', 96),
 ('Bokeo', 96),
@@ -2181,7 +2181,7 @@ VALUES
 ('Xaisomboun', 96);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Riga', 97),
 ('Daugavpils', 97),
@@ -2195,7 +2195,7 @@ VALUES
 ('Tukums', 97);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Beirut', 98),
 ('Mount Lebanon', 98),
@@ -2207,7 +2207,7 @@ VALUES
 ('Baalbek-Hermel Governorate', 98);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Maseru', 99),
 ('Berea', 99),
@@ -2221,7 +2221,7 @@ VALUES
 ('Butha-Buthe', 99);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bomi County', 100),
 ('Bong County', 100),
@@ -2240,7 +2240,7 @@ VALUES
 ('Sinoe County', 100);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Tripoli', 101),
 ('Jufra', 101),
@@ -2266,7 +2266,7 @@ VALUES
 ('Wadi al Shatii', 101);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Balzers', 102),
 ('Eschen', 102),
@@ -2281,7 +2281,7 @@ VALUES
 ('Vaduz', 102);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alytus County', 103),
 ('Kaunas County', 103),
@@ -2295,14 +2295,14 @@ VALUES
 ('Vilnius County', 103);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Luxembourg', 104),
 ('Diekirch', 104),
 ('Grevenmacher', 104);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alaotra-Mangoro', 105),
 ('Amoron\'i Mania', 105),
@@ -2328,7 +2328,7 @@ VALUES
 ('Vatovavy-Fitovinany', 105);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Balaka', 106),
 ('Blantyre', 106),
@@ -2360,7 +2360,7 @@ VALUES
 ('Neno', 106);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Johor', 107),
 ('Kedah', 107),
@@ -2380,7 +2380,7 @@ VALUES
 ('Putrajaya', 107);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alif Alif Atoll', 108),
 ('Alif Dhaal Atoll', 108),
@@ -2404,7 +2404,7 @@ VALUES
 ('Vaavu Atoll', 108);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bamako', 109),
 ('Gao', 109),
@@ -2418,7 +2418,7 @@ VALUES
 ('Tombouctou', 109);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Attard', 110),
 ('Balzan', 110),
@@ -2488,7 +2488,7 @@ VALUES
 ('Żurrieq', 110);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ailuk Atoll', 111),
 ('Arno Atoll', 111),
@@ -2517,7 +2517,7 @@ VALUES
 ('Wotje Atoll', 111);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Adrar', 112),
 ('Assaba', 112),
@@ -2544,7 +2544,7 @@ VALUES
 ('Savanne', 113);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aguascalientes', 114),
 ('Baja California', 114),
@@ -2580,7 +2580,7 @@ VALUES
 ('Mexico City', 114);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Chuuk', 115),
 ('Kosrae', 115),
@@ -2588,7 +2588,7 @@ VALUES
 ('Yap', 115);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Anenii Noi', 116),
 ('Basarabeasca', 116),
@@ -2629,7 +2629,7 @@ VALUES
 ('Transnistria', 116);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Monaco-Ville', 117),
 ('La Condamine', 117),
@@ -2637,7 +2637,7 @@ VALUES
 ('Fontvieille', 117);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Arkhangai', 118),
 ('Bayan-Ölgii', 118),
@@ -2663,7 +2663,7 @@ VALUES
 ('Zavkhan', 118);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Andrijevica', 119),
 ('Bar', 119),
@@ -2690,7 +2690,7 @@ VALUES
 ('Ulcinj', 119);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Tanger-Tetouan-Al Hoceima', 120),
 ('Oriental', 120),
@@ -2706,7 +2706,7 @@ VALUES
 ('Dakhla-Oued Ed-Dahab', 120);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Cabo Delgado', 121),
 ('Gaza', 121),
@@ -2721,7 +2721,7 @@ VALUES
 ('Zambezia', 121);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Chin State', 122),
 ('Kachin State', 122),
@@ -2739,7 +2739,7 @@ VALUES
 ('Yangon Region', 122);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Zambezi', 123),
 ('Erongo', 123),
@@ -2757,12 +2757,12 @@ VALUES
 ('Otjozondjupa', 123);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Nauru', 124);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Province No. 1', 125),
 ('Province No. 2', 125),
@@ -2772,7 +2772,7 @@ VALUES
 ('Province No. 7', 125);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Drenthe', 126),
 ('Flevoland', 126),
@@ -2788,7 +2788,7 @@ VALUES
 ('Zeeland', 126);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Northland', 127),
 ('Auckland', 127),
@@ -2808,7 +2808,7 @@ VALUES
 ('Southland', 127);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Boaco', 128),
 ('Carazo', 128),
@@ -2826,7 +2826,7 @@ VALUES
 ('Río San Juan', 128);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Agadez', 129),
 ('Diffa', 129),
@@ -2837,7 +2837,7 @@ VALUES
 ('Zinder', 129);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Abia', 130),
 ('Adamawa', 130),
@@ -2878,7 +2878,7 @@ VALUES
 ('Abuja', 130);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Skopje Region', 131),
 ('Vardar Region', 131),
@@ -2890,7 +2890,7 @@ VALUES
 ('Polog Region', 131);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Oslo', 132),
 ('Viken', 132),
@@ -2905,7 +2905,7 @@ VALUES
 ('Troms og Finnmark', 132);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Muscat', 133),
 ('Dhofar', 133),
@@ -2920,7 +2920,7 @@ VALUES
 ('Ash Sharqiyah South', 133);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Sindh', 134),
 ('Khyber Pakhtunkhwa', 134),
@@ -2930,7 +2930,7 @@ VALUES
 ('Islamabad Capital Territory', 134);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aimeliik', 135),
 ('Airai', 135),
@@ -2950,7 +2950,7 @@ VALUES
 ('Sonsorol', 135);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bocas del Toro', 136),
 ('Chiriquí', 136),
@@ -2967,7 +2967,7 @@ VALUES
 ('Ngöbe-Buglé', 136);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central', 137),
 ('Chimbu', 137),
@@ -2994,7 +2994,7 @@ VALUES
 ('National Capital District', 137);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alto Paraguay', 138),
 ('Boquerón', 138),
@@ -3015,7 +3015,7 @@ VALUES
 ('Canindeyú', 138);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Amazonas', 139),
 ('Áncash', 139),
@@ -3044,7 +3044,7 @@ VALUES
 ('Ucayali', 139);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('National Capital Region', 140),
 ('Ilocos Region', 140),
@@ -3065,7 +3065,7 @@ VALUES
 ('Cordillera Administrative Region', 140);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Greater Poland Voivodeship', 141),
 ('Kuyavian-Pomeranian Voivodeship', 141),
@@ -3085,7 +3085,7 @@ VALUES
 ('West Pomeranian Voivodeship', 141);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aveiro', 142),
 ('Beja', 142),
@@ -3109,7 +3109,7 @@ VALUES
 ('Madeira', 142);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ad Dawhah', 143),
 ('Al Daayen', 143),
@@ -3121,7 +3121,7 @@ VALUES
 ('Umm Salal', 143);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alba', 144),
 ('Arad',  144),
@@ -3166,7 +3166,7 @@ VALUES
 ('Vrancea', 144);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Republic of Adygea', 145),
 ('Altai Krai', 145),
@@ -3255,7 +3255,7 @@ VALUES
 ('Yamalo-Nenets', 145);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Northern Province', 146),
 ('Southern Province', 146),
@@ -3264,7 +3264,7 @@ VALUES
 ('Kigali City', 146);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Christ Church Nichola Town', 147),
 ('Saint Anne Sandy Point', 147),
@@ -3283,7 +3283,7 @@ VALUES
 
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Anse-la-Raye', 148),
 ('Canaries', 148),
@@ -3298,7 +3298,7 @@ VALUES
 ('Vieux Fort', 148);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Charlotte', 149),
 ('Saint Andrew', 149),
@@ -3309,7 +3309,7 @@ VALUES
 ('Grenadines', 149);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('A\'ana', 150),
 ('Aiga-i-le-Tai', 150),
@@ -3324,7 +3324,7 @@ VALUES
 ('Vaisigano', 150);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('San Marino', 151),
 ('Borgo Maggiore', 151),
@@ -3337,13 +3337,13 @@ VALUES
 ('Chiesanuova', 151);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Sao Tome Province', 152),
 ('Principe Province', 152);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Riyadh Region', 153),
 ('Makkah Region', 153),
@@ -3360,7 +3360,7 @@ VALUES
 ('Jizan Region', 153);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Dakar', 154),
 ('Diourbel', 154),
@@ -3377,7 +3377,7 @@ VALUES
 ('Ziguinchor', 154);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Belgrade', 155),
 ('Bor District', 155),
@@ -3401,7 +3401,7 @@ VALUES
 ('Zlatibor District', 155);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Anse aux Pins', 156),
 ('Anse Boileau', 156),
@@ -3430,7 +3430,7 @@ VALUES
 ('Takamaka', 156);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Eastern Province', 157),
 ('Northern Province', 157),
@@ -3438,7 +3438,7 @@ VALUES
 ('Western Area', 157),
 ('North Western Province', 157);
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bedok', 158),
 ('Bukit Batok', 158),
@@ -3466,7 +3466,7 @@ VALUES
 ('Yishun', 158);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Bratislava Region', 159),
 ('Trnava Region', 159),
@@ -3478,7 +3478,7 @@ VALUES
 ('Košice Region', 159);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Gorenjska', 160),
 ('Goriška', 160),
@@ -3494,7 +3494,7 @@ VALUES
 ('Zasavska', 160);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Province', 161),
 ('Choiseul Province', 161),
@@ -3508,7 +3508,7 @@ VALUES
 ('Western Province', 161);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Awdal', 162),
 ('Galmudug', 162),
@@ -3518,7 +3518,7 @@ VALUES
 ('South West', 162);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Eastern Cape', 163),
 ('Free State', 163),
@@ -3531,7 +3531,7 @@ VALUES
 ('Western Cape', 163);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Equatoria', 164),
 ('Eastern Equatoria', 164),
@@ -3545,7 +3545,7 @@ VALUES
 ('Western Equatoria', 164);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Andalusia', 165),
 ('Aragon', 165),
@@ -3568,7 +3568,7 @@ VALUES
 ('Melilla', 165);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Province', 166),
 ('Eastern Province', 166),
@@ -3581,7 +3581,7 @@ VALUES
 ('Western Province', 166);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Al Jazirah', 167),
 ('Al Qadarif', 167),
@@ -3603,7 +3603,7 @@ VALUES
 ('White Nile', 167);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Brokopondo', 168),
 ('Commewijne', 168),
@@ -3617,7 +3617,7 @@ VALUES
 ('Wanica', 168);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Blekinge län', 169),
 ('Dalarnas län', 169),
@@ -3642,7 +3642,7 @@ VALUES
 ('Västra Götalands län',169);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aargau', 170),
 ('Appenzell Ausserrhoden', 170),
@@ -3671,7 +3671,7 @@ VALUES
 ('Zurich', 170);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aleppo', 171),
 ('Damascus', 171),
@@ -3689,7 +3689,7 @@ VALUES
 ('Al-Hasakah', 171);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Taipei City', 172),
 ('New Taipei City', 172),
@@ -3705,7 +3705,7 @@ VALUES
 ('Miaoli County', 172);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Gorno-Badakhshan Autonomous Region', 173),
 ('Dushanbe', 173),
@@ -3713,7 +3713,7 @@ VALUES
 ('Khatlon Region', 173);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Arusha', 174),
 ('Dar es Salaam', 174),
@@ -3748,7 +3748,7 @@ VALUES
 ('Zanzibar Urban/West', 174);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Amnat Charoen', 175),
 ('Ang Thong', 175),
@@ -3829,7 +3829,7 @@ VALUES
 ('Yasothon', 175);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Maritime Region', 176),
 ('Plateaux Region', 176),
@@ -3838,7 +3838,7 @@ VALUES
 ('Savanes Region', 176);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Tongatapu Group', 177),
 ('Ha\'apai Group', 177),
@@ -3847,7 +3847,7 @@ VALUES
 ('Niuas Group', 177);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Arima', 178),
 ('Chaguanas', 178),
@@ -3865,7 +3865,7 @@ VALUES
 ('Siparia', 178);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ariana', 179),
 ('Beja', 179),
@@ -3893,7 +3893,7 @@ VALUES
 ('Zaghouan', 179);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Adana', 180),
 ('Adıyaman', 180),
@@ -3978,7 +3978,7 @@ VALUES
 ('Düzce', 180);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Ahal Province', 181),
 ('Balkan Province', 181),
@@ -3987,7 +3987,7 @@ VALUES
 ('Mary Province', 181);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Funafuti', 182),
 ('Nanumea', 182),
@@ -3999,7 +3999,7 @@ VALUES
 ('Niulakita', 182);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Region', 183),
 ('Eastern Region', 183),
@@ -4007,7 +4007,7 @@ VALUES
 ('Western Region', 183);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Cherkasy Oblast', 184),
 ('Chernihiv Oblast', 184),
@@ -4038,7 +4038,7 @@ VALUES
 ('Sevastopol', 184);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Abu Dhabi', 185),
 ('Dubai', 185),
@@ -4049,7 +4049,7 @@ VALUES
 ('Fujairah', 185);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('England', 186),
 ('Scotland', 186),
@@ -4057,7 +4057,7 @@ VALUES
 ('Northern Ireland', 186);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Alabama', 187),
 ('Alaska', 187),
@@ -4111,7 +4111,7 @@ VALUES
 ('Wyoming', 187);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Artigas', 188),
 ('Canelones', 188),
@@ -4134,7 +4134,7 @@ VALUES
 ('Treinta y Tres', 188);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Andijan', 189),
 ('Bukhara', 189),
@@ -4151,7 +4151,7 @@ VALUES
 ('Xorazm', 189);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Malampa', 190),
 ('Penama', 190),
@@ -4161,7 +4161,7 @@ VALUES
 ('Torba', 190);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Amazonas', 191),
 ('Anzoátegui', 191),
@@ -4188,7 +4188,7 @@ VALUES
 ('Zulia', 191);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Hanoi', 192),
 ('Ho Chi Minh City', 192),
@@ -4215,7 +4215,7 @@ VALUES
 ('Kien Giang', 192);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Aden', 193),
 ('Abyan', 193),
@@ -4241,7 +4241,7 @@ VALUES
 ('Taiz', 193);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Central Province', 194),
 ('Copperbelt Province', 194),
@@ -4255,7 +4255,7 @@ VALUES
 ('Western Province', 194);
 
 
-INSERT INTO states (name, country_id) 
+INSERT INTO States (Name, CountryId) 
 VALUES
 ('Harare', 195),
 ('Bulawayo', 195),
