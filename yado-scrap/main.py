@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 from get_data import get_data
+from datetime import datetime
 from generate_uuid import generate_uuid
 import random
 
@@ -92,11 +93,7 @@ for city in data:
             hotel_id = generate_uuid()
             personal_id = '3c7b4247-dc17-4866-8d85-a10ac22576cf'
 
-            insert_statement_owners = f"INSERT INTO Sites (Id , UserId, HotelId ) VALUES ('{generate_uuid()}','{personal_id}','{hotel_id}');"
-
-            # Escribir el INSERT en el archivo hotels_insert.txt
-            print(insert_statement_owners + "\n")
-            output_file_owners.write(insert_statement_owners + "\n")
+            
 
             try:
                 # Obtener el nombre del hotel
@@ -220,9 +217,10 @@ for city in data:
                                     precio_element = proveedor.find(class_="c5l3f-price-col").a
                                     if precio_element is not None:
                                         precio = precio_element.text.strip()
+                                        precio = int(precio.replace("$", ""))
 
                                         # Generar la declaración SQL INSERT
-                                        insert_statement_sites = f"INSERT INTO Sites (Id , TypeRomm, OriginUrl , NightlyPrice , HotelId , CompanyId ) VALUES ('{generate_uuid()}','{tipo_habitacion}','{new_window_url}', {precio}, '{hotel_id}', {CompanyId});"
+                                        insert_statement_sites = f"INSERT INTO Sites (Id ,  OriginUrl , NightlyPrice , HotelId , CompanyId,TypeRomm) VALUES ('{generate_uuid()}','{new_window_url}', {precio}, '{hotel_id}', {CompanyId},'{tipo_habitacion}');"
 
                                         # Escribir el INSERT en el archivo hotels_insert.txt
                                         print(insert_statement_sites + "\n")
@@ -266,9 +264,14 @@ for city in data:
                         rating_number = "No rating available"
                         positive_comment_text = "No positive comment available"
                         negative_comment_text = "No negative comment available"
+                    # Obtener la fecha y hora actual
+                    current_datetime = datetime.utcnow()
+
+                    positive_comment_text = positive_comment_text.replace('"', "'")
+                    negative_comment_text = negative_comment_text.replace('"', "'")
 
                     # Generar la declaración SQL INSERT
-                    insert_statement_reviews = f"INSERT INTO Reviews (Id, Qualification, PositiveComment, NegativeComment, UserId, HotelId, Date) VALUES ('{generate_uuid()}', {rating_number}, \"{positive_comment_text}\", \"{negative_comment_text}\", {stars}, '{hotel_id}', datetime.utcnow());"
+                    insert_statement_reviews = f"INSERT INTO Reviews (Id, Qualification, PositiveComment, NegativeComment, UserId, HotelId, Date) VALUES ('{generate_uuid()}', {rating_number}, \"{positive_comment_text}\", \"{negative_comment_text}\", '{personal_id}', '{hotel_id}', '{current_datetime}');"
 
                     # Escribir el INSERT en el archivo hotels_insert.txt
                     print(insert_statement_reviews + "\n")
@@ -396,7 +399,7 @@ for city in data:
 
             # Generar la declaración SQL INSERT
             # Construye la declaración SQL con los valores aleatorios
-            insert_statement_parametres = f"INSERT INTO Parameters (BicycleRental, Solarium, GolfCourse, Massage, " \
+            insert_statement_parametres = f"INSERT INTO Parameters (HotelId,BicycleRental, Solarium, GolfCourse, Massage, " \
                                           f"FitnessCentre, FreeCancellation, SelfCatering, BreakfastIncluded, " \
                                           f"BreakfastDinnerIncluded, TwinBeds, DoubleBed, LargeDoubleBed, " \
                                           f"ExtraLargeDoubleBed, NonSmokingRooms, Parking, VeryGoodWifi, " \
@@ -407,9 +410,8 @@ for city in data:
                                           f"Terrace, Balcony, BlatScreenTv, WashingMachine, Patio, " \
                                           f"Soundproofing, ViewHotel, SeaView, WheelchairAccessible, " \
                                           f"ToiletGrabRails, HigherLevelToilet, LowerBathroomSink, " \
-                                          f"EmergencyCordBathroom, VisualAidsBraille, VisualAidsTactileSigns, " \
-                                          f"HotelId) VALUES " \
-                                          f"({generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
+                                          f"EmergencyCordBathroom, VisualAidsBraille, VisualAidsTactileSigns) VALUES " \
+                                          f"('{hotel_id}', {generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
@@ -431,11 +433,17 @@ for city in data:
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
                                           f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)}, " \
-                                          f"{generate_numeric_value(0, 1)}, '{hotel_id}');"
+                                          f"{generate_numeric_value(0, 1)}, {generate_numeric_value(0, 1)});"
 
             # Escribir el INSERT en el archivo images_insert.txt
             print(insert_statement_parametres + "\n")
             output_file_parametres.write(insert_statement_parametres + "\n")
+
+            insert_statement_owners = f"INSERT INTO Owners (Id , UserId, HotelId ) VALUES ('{generate_uuid()}','{personal_id}','{hotel_id}');"
+
+            # Escribir el INSERT en el archivo hotels_insert.txt
+            print(insert_statement_owners + "\n")
+            output_file_owners.write(insert_statement_owners + "\n")
 
             # Escribir el INSERT en el archivo hotels_insert.txt
             print(insert_statement_hotels + "\n")
